@@ -3,8 +3,8 @@
 #include <stdio.h>
 
 //Screen dimension constants
-const int SCREEN_WIDTH = 640;
-const int SCREEN_HEIGHT = 480;
+#define SCREEN_WIDTH 640
+#define SCREEN_HEIGHT 480
 
 int main( int argc, char* args[] )
 {
@@ -37,7 +37,7 @@ int main( int argc, char* args[] )
 			if(SDL_FillRect( screenSurface, NULL, color) < 0){
 				printf( "SDL rect could not be filled! SDL_Error: %s\n", SDL_GetError() );
 			}
-
+			
 			//Update the surface
 			SDL_UpdateWindowSurface( window );
 
